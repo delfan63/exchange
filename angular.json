@@ -25,18 +25,25 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/swiper/swiper-bundle.min.css"
             ],
-            "scripts": []
+            "scripts": [             
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/swiper/swiper-bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
+                  "maximumWarning": "4mb", 
+                  "maximumError": "5mb"
+               },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
@@ -66,7 +73,11 @@
               "browserTarget": "test:build:development"
             }
           },
-          "defaultConfiguration": "development"
+           "defaultConfiguration": "development",
+           "options": {
+            "browserTarget": "your-application-name:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -94,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e99d5efa-6946-4464-bae5-f5438787eedd"
   }
 }

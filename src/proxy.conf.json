@@ -1,0 +1,8 @@
+{
+    "/arz": {
+    "target": "http://api.codebazan.ir",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel":"debug"
+        }
+    }

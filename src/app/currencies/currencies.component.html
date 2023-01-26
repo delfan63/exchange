@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">نام ارز</th>
+            <th scope="col">قیمت</th>
+            <th scope="col">میزان تغییر</th>
+            <th scope="col">کمترین قیمت</th>
+            <th scope="col">بیشترین قیمت</th>
+            <th scope="col">تاریخ به روزرسانی</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let currency of currencies;index as indexOfelement;">
+                <th scope="row">{{indexOfelement+1}}</th>
+                <td>{{currency.name}}</td>
+                <td>{{currency.price}}</td>
+                <td>{{currency.change}}</td>
+                <td>{{currency.low}}</td>
+                <td>{{currency.High}}</td>
+                <td>{{currency.update}}</td>
+            </tr>
+        </tbody>
+        
+        </table>
+</div>
+<div id="ProgressBar" class="container-fluid">
+
+<circle-progress *ngIf="showSpinner"
+  [percent]="100"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#78C000'"
+  [innerStrokeColor]="'#C7E596'"
+  [animation]="true"
+  [animationDuration]="10000"
+></circle-progress>
+</div>

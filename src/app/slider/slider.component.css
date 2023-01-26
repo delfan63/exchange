@@ -1,0 +1,11 @@
+.swiper-slide{
+    text-align: center;
+}
+.swiper-slide img
+{
+    max-height: 500px;
+    width: 95%;
+    padding: 10px;
+    border: 10px solid transparent;
+    border-image: url(../../assets/border.png) 30 stretch;
+}
